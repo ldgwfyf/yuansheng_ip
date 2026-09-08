@@ -4,40 +4,40 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇳 印度 (India) 01 - xiaohe
+- name: 🇧🇷 BR 01 - xiaohe
   type: ss
-  server: 139.84.166.47
+  server: 216.128.168.190
   port: 8388
   cipher: aes-256-gcm
-  password: GEdoeeqLZtkJRgSa
+  password: owVdNnQcdPgthSyX
   udp: true
-- name: 🇮🇳 印度 (India) 02 - xiaohe
+- name: 🇧🇷 BR 02 - xiaohe
   type: vless
-  server: 4.240.110.47
+  server: 172.64.229.185
   port: 443
-  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  uuid: 7b1897ec-afb5-425c-afbf-d79634b6b317
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: bab-6.site
+  servername: br-gru.xhs152.shop
   network: ws
   ws-opts:
-    path: /vws/
+    path: /announcement?ed=2048
     headers:
-      Host: bab-6.site
+      Host: br-gru.xhs152.shop
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇳 印度 (India) 01 - xiaohe
-  - 🇮🇳 印度 (India) 02 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
+  - 🇧🇷 BR 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇳 印度 (India) 01 - xiaohe
-  - 🇮🇳 印度 (India) 02 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
+  - 🇧🇷 BR 02 - xiaohe
 rules:
 - MATCH,PROXIES
