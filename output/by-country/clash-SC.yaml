@@ -5,15 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇨 SC 01 - xiaohe
-  type: vless
-  server: 45.130.125.162
-  port: 8443
-  uuid: 5960576d-829e-4d09-8232-0e80121a6fe4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: vi.mojaz-persian-music.ir
-- name: 🇸🇨 SC 02 - xiaohe
   type: vmess
   server: 156.226.183.181
   port: 54321
@@ -29,13 +20,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇨 SC 01 - xiaohe
-  - 🇸🇨 SC 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇸🇨 SC 01 - xiaohe
-  - 🇸🇨 SC 02 - xiaohe
 rules:
 - MATCH,PROXIES
