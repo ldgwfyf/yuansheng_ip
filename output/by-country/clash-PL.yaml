@@ -34,20 +34,6 @@ proxies:
       Host: shuma.ccwu.cc
 - name: 🇵🇱 PL 03 - xiaohe
   type: vless
-  server: 217.12.206.160
-  port: 81
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn8848.776676.xyz
-  network: ws
-  ws-opts:
-    path: '%2Fmembers%2Fplaylist%3Fed%3D2560'
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇵🇱 PL 04 - xiaohe
-  type: vless
   server: 34.118.70.195
   port: 443
   uuid: d518b4e2-bd6e-4d4e-a26e-238154d8d60c
@@ -57,7 +43,7 @@ proxies:
   reality-opts:
     public-key: t_ql5pn5MG1bkVQoteCXoKkSTzUzOs_yXMllmsyiqXY
   servername: www.cloudflare.com
-  client-fingerprint: ios
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,7 +52,6 @@ proxy-groups:
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
   - 🇵🇱 PL 03 - xiaohe
-  - 🇵🇱 PL 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -75,6 +60,5 @@ proxy-groups:
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
   - 🇵🇱 PL 03 - xiaohe
-  - 🇵🇱 PL 04 - xiaohe
 rules:
 - MATCH,PROXIES
