@@ -6,15 +6,6 @@ log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   type: vless
-  server: tw.giannaycs.com
-  port: 12943
-  uuid: d68fbc96-5187-4b8f-965e-eecd7a699e81
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tw.giannaycs.com
-- name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
-  type: vless
   server: zs.giannaycs.com
   port: 12943
   uuid: d68fbc96-5187-4b8f-965e-eecd7a699e81
@@ -22,6 +13,15 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: zs.giannaycs.com
+- name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
+  type: vless
+  server: tw.giannaycs.com
+  port: 12943
+  uuid: d68fbc96-5187-4b8f-965e-eecd7a699e81
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tw.giannaycs.com
 - name: 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
   type: vmess
   server: fujrdt.d6f54hd1j.cc
