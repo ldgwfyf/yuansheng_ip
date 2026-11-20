@@ -4,29 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇿 KZ 01 - xiaohe
+- name: 🇩🇰 DK 01 - xiaohe
   type: vless
-  server: 109.248.170.119
-  port: 13447
-  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
+  server: 193.180.208.167
+  port: 443
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: _0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE
-  servername: yahoo.com
-  client-fingerprint: chrome
+  servername: v2n5.11676767.xyz
+  network: ws
+  ws-opts:
+    path: /doujin/channels/cbfp=chrome
+    headers:
+      Host: v2n5.11676767.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇿 KZ 01 - xiaohe
+  - 🇩🇰 DK 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇿 KZ 01 - xiaohe
+  - 🇩🇰 DK 01 - xiaohe
 rules:
 - MATCH,PROXIES
